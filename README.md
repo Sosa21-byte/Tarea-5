@@ -214,20 +214,27 @@ qemu-img create -f qcow2 mi_maquina.qcow2 20G
 ```bash
 qemu-system-x86_64 -hda mi_maquina.qcow2 -cdrom ubuntu.iso -m 4G -smp 2
 ```
+
 # Pantallazos de QEMU
+
 <img width="898" height="139" alt="image" src="https://github.com/user-attachments/assets/5c5cfd30-d70b-4092-80ad-8386415d999b" />
+
 Instalacion de QEMU 
 
 <img width="1831" height="318" alt="image" src="https://github.com/user-attachments/assets/1731175c-4214-458d-9e14-8974db06583a" />
+
 Descarga de imagen e inicializacion de QEMU
 
 <img width="1273" height="861" alt="image" src="https://github.com/user-attachments/assets/aef278a9-2712-4ca1-a06f-b77cefccd1e1" />
+
 QEMU  inicializado   
 
 <img width="591" height="243" alt="image" src="https://github.com/user-attachments/assets/563f6560-8ca0-48dd-bd4e-c570990d67d1" />
+
 Pantalla Login 
 
-En el siguiente pantallazo se muestran 5 comandos para verificar el funcionamiento correcto de QEMU 
+# En el siguiente pantallazo se muestran 5 comandos para verificar el funcionamiento correcto de QEMU 
+
 <img width="869" height="377" alt="image" src="https://github.com/user-attachments/assets/a321c2df-a9c2-4e1d-9d71-aed5ec617947" />
 
 # 1. Ver información del sistema
@@ -343,21 +350,21 @@ Explicación: Guarda los resultados en formato legible (texto plano)
 
 Para el informe: Documentación profesional de evidencias.
 
-📋 RESUMEN EJECUTIVO DEL ANÁLISIS NMAP
-🔍 Hallazgos Principales:
+# 📋 RESUMEN EJECUTIVO DEL ANÁLISIS NMAP
+# 🔍 Hallazgos Principales:
 ✅ Host activo: 10.0.2.15 (VM QEMU - Alpine Linux)
 ✅ Estado: Todos los puertos TCP/UDP FILTRADOS
 ✅ Firewall: Configuración de seguridad óptima
 ✅ Servicios: Ninguno expuesto (configuración por defecto segura)
 
-🛡️ Interpretación de Resultados:
+# 🛡️ Interpretación de Resultados:
 Puertos filtrados = Firewall bloqueando acceso (seguridad)
 
 Host up pero no responde = Configuración defensiva correcta
 
 Mismo comportamiento en TCP/UDP = Protección consistente
 
-📊 Técnicas de Escaneo Utilizadas:
+# 📊 Técnicas de Escaneo Utilizadas:
 Descubrimiento de hosts (-sn)
 
 Escaneo básico de puertos (1000 puertos comunes)
