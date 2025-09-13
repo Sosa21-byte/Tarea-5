@@ -1,4 +1,3 @@
-# Tarea-5
 # Investigación de Sistemas Operativos
 
 ## Debian
