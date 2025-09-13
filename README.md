@@ -2,8 +2,11 @@
 
 ## Debian
 **Historia:** Fundado por Ian Murdock en 1993. Nació como un proyecto abierto para crear un sistema operativo libre y estable.
+
 **¿Qué es?:** Uno de los sistemas operativos Linux más antiguos y estables, base de muchas distribuciones.
+
 **Características:** Gran estabilidad, amplísimo repositorio de software, gestión de paquetes APT, ciclo de lanzamiento conservador.
+
 **Uso y Aplicaciones:** Servidores, estaciones de trabajo, sistemas embebidos. Es la base de Ubuntu y muchas otras distros.
 
 ## Arch Linux
