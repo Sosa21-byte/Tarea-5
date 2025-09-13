@@ -1,5 +1,5 @@
 # Investigación de Sistemas Operativos
-
+ 
 ## Debian
 <img width="4000" height="2500" alt="debian-linux-logo" src="https://github.com/user-attachments/assets/e5f2bb35-9d0c-4e54-aa5b-c4a77c886332" />
 
