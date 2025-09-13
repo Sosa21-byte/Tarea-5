@@ -202,10 +202,9 @@ La diversidad del ecosistema Linux permite encontrar la distribución perfecta p
 ## Comandos Básicos
 # Instalación de QEMU
 **En Ubuntu/Debian:**
-bash
-//
+```bash
 sudo apt-get install qemu-system qemu-utils
-//
+```
 ### Crear un disco virtual:
 ```bash
 qemu-img create -f qcow2 mi_maquina.qcow2 20G
@@ -216,21 +215,44 @@ qemu-img create -f qcow2 mi_maquina.qcow2 20G
 qemu-system-x86_64 -hda mi_maquina.qcow2 -cdrom ubuntu.iso -m 4G -smp 2
 ```
 # Pantallazos de QEMU
-1. Instalación de Sistema Operativo
-https://github.com/user-attachments/assets/ejemplo-instalacion-qemu
-Proceso de instalación de un sistema operativo invitado en QEMU
+<img width="898" height="139" alt="image" src="https://github.com/user-attachments/assets/5c5cfd30-d70b-4092-80ad-8386415d999b" />
+Instalacion de QEMU 
 
-2. Interfaz Gráfica de QEMU
-https://github.com/user-attachments/assets/ejemplo-interfaz-qemu
-Interfaz gráfica con QEMU mostrando un sistema operativo ejecutándose
+<img width="1831" height="318" alt="image" src="https://github.com/user-attachments/assets/1731175c-4214-458d-9e14-8974db06583a" />
+Descarga de imagen e inicializacion de QEMU
 
-3. Configuración de Red
-https://github.com/user-attachments/assets/ejemplo-red-qemu
-Configuración de redes virtuales en QEMU
+<img width="1273" height="861" alt="image" src="https://github.com/user-attachments/assets/aef278a9-2712-4ca1-a06f-b77cefccd1e1" />
+QEMU  inicializado   
 
-4. Administración de Discos
-https://github.com/user-attachments/assets/ejemplo-discos-qemu
-Gestión de discos virtuales con qemu-img
+<img width="591" height="243" alt="image" src="https://github.com/user-attachments/assets/563f6560-8ca0-48dd-bd4e-c570990d67d1" />
+Pantalla Login 
+
+En el siguiente pantallazo se muestran 5 comandos para verificar el funcionamiento correcto de QEMU 
+<img width="869" height="377" alt="image" src="https://github.com/user-attachments/assets/a321c2df-a9c2-4e1d-9d71-aed5ec617947" />
+
+# 1. Ver información del sistema
+```bash
+uname -a
+```
+# 2. Ver espacio en disco
+```bash
+df -h
+```
+# 3. Ver memoria RAM
+```bash
+free -h
+```
+# 4. Ver interfaces de red
+```bash
+ip addr
+```
+# 5. Actualizar paquetes (opcional)
+```bash
+apk update
+```
+<img width="188" height="23" alt="image" src="https://github.com/user-attachments/assets/9046de8e-f824-4d68-9c4e-d51193baeb31" />
+Comando para salir de la maquina virtual 
+
 ## Ventajas para el Aprendizaje
 
 - 🚀 **Rápido y eficiente** con aceleración KVM
@@ -238,5 +260,112 @@ Gestión de discos virtuales con qemu-img
 - 🔧 **Altamente configurable** para diferentes necesidades
 - 🆓 **Software libre** sin costos de licencia
 
----
+# 3 
 
+<img width="940" height="160" alt="image" src="https://github.com/user-attachments/assets/31843ff8-72bf-472c-86fe-95349c2656d4" />
+
+Explicación:
+Este comando muestra la versión de Nmap instalada. Confirma que todo está listo.
+
+
+<img width="941" height="389" alt="image" src="https://github.com/user-attachments/assets/7fa8feae-f183-4205-8bb5-d4e0344990c7" />
+
+Explicación:
+Este comando muestra las interfaces de red de tu WSL. Busca la dirección IP
+
+<img width="918" height="187" alt="image" src="https://github.com/user-attachments/assets/4346bbba-335e-4b32-b3ba-145f265b1ee2" />
+
+Este comando escanea los puertos de tu propio sistema WSL (localhost). 
+
+<img width="912" height="229" alt="image" src="https://github.com/user-attachments/assets/9d1ecc27-ffe6-4653-8797-16638f58a806" />
+
+Explicación:
+
+-Pn: Asume que el host está activo (salta la fase de ping)
+-Escanea directamente los puertos aunque el host bloquee ICMP
+
+<img width="952" height="286" alt="image" src="https://github.com/user-attachments/assets/7cf84bae-9d69-4482-89df-8260e42df127" />
+
+Explicación:
+-sV: Detecta versiones de servicios (intenta identificar qué corre en puertos)
+
+<img width="921" height="343" alt="image" src="https://github.com/user-attachments/assets/b28e33d0-0fc7-4602-9d92-8f5165ee4293" />
+
+Explicación:
+
+-Pn: Asume host activo
+
+-p 22,80,443,21,23,53: Escanea solo puertos específicos comunes:
+
+22 (SSH), 80 (HTTP), 443 (HTTPS)
+
+21 (FTP), 23 (Telnet), 53 (DNS)
+
+<img width="938" height="295" alt="image" src="https://github.com/user-attachments/assets/2efe152e-5354-4713-8d80-a6fd0c128ac8" />
+<img width="951" height="390" alt="image" src="https://github.com/user-attachments/assets/0313c5d4-b3a2-4231-8cf1-499d805bcb79" />
+
+Explicacion de cada comando :
+-Pn
+
+Significado: "Treat all hosts as online" (Tratar todos los hosts como en línea)
+
+Explicación: Salta la fase de descubrimiento por ping. Útil cuando el firewall bloquea ICMP.
+
+Para el informe: Demuestra evasión de medidas de seguridad básicas.
+
+-A
+
+Significado: "Aggressive scan" (Escaneo agresivo)
+
+Incluye:
+
+Detección de SO (-O)
+
+Detección de versiones (-sV)
+
+Escaneo con scripts (-sC)
+
+Traceroute
+
+Para el informe: Muestra un análisis comprehensivo de alto nivel.
+
+10.0.2.15
+
+Objetivo: La dirección IP de tu VM QEMU
+
+Origen: Típica dirección en redes NAT de QEMU
+
+-oN resultado_final_escaneo.txt
+
+Significado: "Output normal format to file"
+
+Explicación: Guarda los resultados en formato legible (texto plano)
+
+Para el informe: Documentación profesional de evidencias.
+
+📋 RESUMEN EJECUTIVO DEL ANÁLISIS NMAP
+🔍 Hallazgos Principales:
+✅ Host activo: 10.0.2.15 (VM QEMU - Alpine Linux)
+✅ Estado: Todos los puertos TCP/UDP FILTRADOS
+✅ Firewall: Configuración de seguridad óptima
+✅ Servicios: Ninguno expuesto (configuración por defecto segura)
+
+🛡️ Interpretación de Resultados:
+Puertos filtrados = Firewall bloqueando acceso (seguridad)
+
+Host up pero no responde = Configuración defensiva correcta
+
+Mismo comportamiento en TCP/UDP = Protección consistente
+
+📊 Técnicas de Escaneo Utilizadas:
+Descubrimiento de hosts (-sn)
+
+Escaneo básico de puertos (1000 puertos comunes)
+
+Detección de versiones (-sV)
+
+Escaneo UDP (-sU)
+
+Evación de firewall (-Pn)
+
+Puertos específicos (22,80,443,53,etc.)
