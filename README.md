@@ -1,4 +1,5 @@
-# Investigación de Sistemas Operativos Linux 🐧
+
+# 1 Investigación de Sistemas Operativos Linux 🐧
 
 ## Tabla de Contenidos 📑
 1. [Introducción](#introducción-)
@@ -183,3 +184,59 @@ Cada distribución Linux tiene su propósito específico y público objetivo. La
 - **Para personalización**: Arch Linux, Garuda Linux
 
 La diversidad del ecosistema Linux permite encontrar la distribución perfecta para cada caso de uso y nivel de experiencia.
+
+# 2 QEMU: Emulador y Virtualizador 🖥️
+
+## ¿Qué es QEMU?
+
+**QEMU** (Quick Emulator) es un emulador de código abierto que permite ejecutar sistemas operativos completos en diferentes arquitecturas de hardware. Es la herramienta principal que usaremos para virtualización en la materia.
+
+## Características Principales
+
+- ✅ **Emulación de múltiples arquitecturas** (x86, ARM, RISC-V, etc.)
+- ✅ **Virtualización con aceleración KVM** (Kernel-based Virtual Machine)
+- ✅ **Soporte para diversos formatos de disco** (qcow2, raw, vdi, vmdk)
+- ✅ **Redes virtuales configurables**
+- ✅ **Snapshots** para guardar estados del sistema
+
+## Comandos Básicos
+# Instalación de QEMU
+**En Ubuntu/Debian:**
+bash
+//
+sudo apt-get install qemu-system qemu-utils
+//
+### Crear un disco virtual:
+```bash
+qemu-img create -f qcow2 mi_maquina.qcow2 20G
+```
+
+### Iniciar una máquina virtual:
+```bash
+qemu-system-x86_64 -hda mi_maquina.qcow2 -cdrom ubuntu.iso -m 4G -smp 2
+```
+# Pantallazos de QEMU
+1. Instalación de Sistema Operativo
+https://github.com/user-attachments/assets/ejemplo-instalacion-qemu
+Proceso de instalación de un sistema operativo invitado en QEMU
+
+2. Interfaz Gráfica de QEMU
+https://github.com/user-attachments/assets/ejemplo-interfaz-qemu
+Interfaz gráfica con QEMU mostrando un sistema operativo ejecutándose
+
+3. Configuración de Red
+https://github.com/user-attachments/assets/ejemplo-red-qemu
+Configuración de redes virtuales en QEMU
+
+4. Administración de Discos
+https://github.com/user-attachments/assets/ejemplo-discos-qemu
+Gestión de discos virtuales con qemu-img
+## Ventajas para el Aprendizaje
+
+- 🚀 **Rápido y eficiente** con aceleración KVM
+- 📁 **Formatos compactos** como qcow2 con snapshots
+- 🔧 **Altamente configurable** para diferentes necesidades
+- 🆓 **Software libre** sin costos de licencia
+
+---
+
